@@ -1,0 +1,13 @@
+文件处理：
+f = open()// 文件打开
+readLine()// 读文件
+writeline()// 写文件  需要手动换行
+writelines()// 写列表字符串
+文件的打开或关闭可能会出现异常，使用Try catch来捕获异常
+GBK != BIG5：相同字的内码值是不同的，可能会出现乱码
+国际标准化编码：unicode
+filter(,):第一个参数为一个函数，第二个参数是列表，列表的值就是第一个参数（函数）的参数
+<Lazy模式>
+numbers = [1,2,3,4,5]
+filter(lambda x:x%2 == 0,numbers),这样得到的结果是一个地址
+list(filter(lambda x:x%2 == 0,numbers)),这样才会得到最终的结果[2,4]
