@@ -20,5 +20,4 @@ def askUser():
             print(e.args[0])
             print("请输入一个float值:")
 
-
 print(askUser())
