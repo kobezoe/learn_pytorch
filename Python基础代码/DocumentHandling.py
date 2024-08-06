@@ -10,7 +10,7 @@
 
 # 会自动关闭文件资源
 sents = []
-with open("文件处理.txt", "r") as f:
+with open("../Python基础笔记/文件处理.txt", "r") as f:
     for line in f:
         line = line.strip();
         tokens = line.split('。')
@@ -36,7 +36,7 @@ print(sents)
 #     if re.search(regex, sent) is not None:
 #         print(sent)
 
-with open('文件处理copy.txt', 'w', encoding='utf-8') as f:
+with open('../Python基础笔记/文件处理copy.txt', 'w', encoding='utf-8') as f:
     # writelines() 的参数必须是一个列表，write()的参数是一个字符串
     sents = [sent + '\n' for sent in sents]
     f.writelines(sents)
