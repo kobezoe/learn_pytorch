@@ -25,6 +25,7 @@ the stride of the convolving kerenl can be a single number or a tuple(sH,sW) Def
 output1 = F.conv2d(input,kernel,stride=1)
 print(output1)
 
+
 output2 = F.conv2d(input,kernel,stride=2)
 print(output2)
 
