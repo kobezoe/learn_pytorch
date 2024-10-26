@@ -10,7 +10,7 @@ from urllib3.filepost import writer
 #   2. tensor 数据类型
 #  为什么使用相对路径:
 #     绝对路径中的转义符 无法被当作字符串使用
-img_path = "data/train/ants_image/0013035.jpg"
+img_path = "../data/train/ants_image/0013035.jpg"
 img = Image.open(img_path)
 print(img)
 

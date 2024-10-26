@@ -4,7 +4,7 @@ import numpy as np
 
 writer = SummaryWriter('logs')
 # 输入是一个 torch.Tensor, numpy.ndarray, or string/blobname gloabl_step 第一步
-img_PIL = Image.open("data/train/bees_image/16838648_415acd9e3f.jpg")
+img_PIL = Image.open("../data/train/bees_image/16838648_415acd9e3f.jpg")
 # 转换为 numpy型变量
 image_Array = np.array(img_PIL)
 # 为啥 最后一个参数不加会报错

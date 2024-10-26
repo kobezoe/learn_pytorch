@@ -4,7 +4,7 @@ from torchvision import transforms
 import  cv2
 
 writer = SummaryWriter("logs")
-img = Image.open("image/pytorch.png")
+img = Image.open("../image/pytorch.png")
 # img = cv2.imread("image/pytorch.png")
 # 获取图像的形状
 # height, width, channels = img.shape

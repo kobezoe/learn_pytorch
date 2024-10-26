@@ -5,7 +5,7 @@ from torch.nn import ReLU, Sigmoid
 from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
 
-dataset = torchvision.datasets.CIFAR10("./dataset",train=False,transform=torchvision.transforms.ToTensor(),download=True)
+dataset = torchvision.datasets.CIFAR10("../dataset", train=False, transform=torchvision.transforms.ToTensor(), download=True)
 dataLoader = DataLoader(dataset,batch_size=64)
 input = torch.tensor([[1,-0.5],
                      [-1,3]])
