@@ -8,8 +8,9 @@ import torch
 import torchvision
 from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
-
+import d2l as d2l
 from trainModel import *
+import matplotlib
 
 # 准备数据集
 train_set = torchvision.datasets.CIFAR10(root="../dataset", train=True, download=True, transform=torchvision.transforms.ToTensor())
