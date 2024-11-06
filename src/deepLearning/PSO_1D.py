@@ -1,4 +1,3 @@
-
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -7,9 +6,9 @@ def f(x):
     return x * np.sin(x) * np.cos(2 * x) - 2 * x * np.sin(3 * x) + 3 * x * np.sin(4 * x)
 
 # 初始化参数
-N = 20                  # 粒子数量
+N = 50                  # 粒子数量
 d = 1                   # 解空间的维数
-ger = 100               # 最大迭代次数
+ger = 500               # 最大迭代次数
 limit = [0, 50]         # 位置的边界
 vlimit = [-10, 10]      # 速度的边界
 w = 0.8                 # 惯性权重
@@ -21,8 +20,9 @@ x = limit[0] + (limit[1] - limit[0]) * np.random.rand(N, d)
 v = np.random.rand(N, d)
 xm = x.copy()           # 每个粒子的历史最佳位置
 ym = np.zeros(d)        # 全局最佳位置
-fxm = -np.ones(N) * np.inf   # 每个粒子的历史最佳适应度
-fym = -np.inf            # 全局最佳适应度
+fxm = f(x).copy()       # 每个粒子的历史最佳适应度
+fym = np.max(fxm)       # 全局最佳适应度
+ym = xm[np.argmax(fxm), :]  # 全局最佳位置
 
 # 绘制初始函数曲线和初始粒子位置
 x0 = np.linspace(0, limit[1], 500)
